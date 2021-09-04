@@ -58,8 +58,10 @@
         function tinh(){
             var inputvl = document.getElementById("ipvl").value;
             var tong = 0;
-            if(inputvl == '')
+            if(inputvl == ''){
                 alert("bạn chưa nhập dữ liệu");
+                
+            }
             for(var i = 1 ; i <= inputvl ; i++) {
                 if(checkscp(i)){
                     tong += i;
