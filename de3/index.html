@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        Bài kiểm tra số 2
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Lập trình Java</a></li>
+            <li>
+                <a href="#">Thiết kế web</a>
+                <ul class="con">
+                    <li><a href="#">Tài liệu HTML</a></li>
+                    <li><a href="#">Tài liệu CSS</a></li>
+                    <li><a href="#">Tài liệu Javascript</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Lập trình C#</a></li>
+            <li><a href="#">Lập trình web</a></li>
+            <li><a href="#">Lập trình hướng đối tượng</a></li>
+            <li><a href="#">Cơ sở dữ liệu</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="content">
+            <h1>Tính tổng số hoàn hảo</h1>
+            <div class="dong">
+                <p>số nguyên n:</p>
+                <input type="text" class="input-text" placeholder="Nhập số nguyên n" id="songuyen">
+            </div>
+
+            <div class="dong">
+                <p>
+                    Tổng giá trị các số hoàn hảo:
+                </p>
+                <input type="text"   style="margin-left: 16px;"class="input-text" readonly="" id="kq">
+            </div>
+
+            <div class="dong">
+                <input type="button" value="Tính" id="btn" onclick="tinh()">
+            </div>
+        </div>
+    </section>
+    <footer>
+        bản quyền thuộc về test 2
+    </footer>
+    <script>
+        function checkshh(a){
+            var tong = 0;
+            for(var i = 0 ; i < a ; i++) {
+                if( a % i == 0){
+                    tong += i;
+                }
+            }
+            if(tong == a){
+                return a;
+            }
+        }
+
+
+        function tinh(){
+            var songuyen = document.getElementById("songuyen").value;
+            if(songuyen == ""){
+                alert("bạn chưa nhập dữ liệu");
+            }
+            var kq = 0;
+            for(var i = 1 ; i < songuyen ; i++) {
+              if(checkshh(i)){
+                 console.log(i);
+                kq += i;
+              }
+              
+            }
+            document.getElementById("kq").value = kq;
+        }
+    </script>
+</body>
+</html>

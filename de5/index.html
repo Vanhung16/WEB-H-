@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        Bài kiểm tra số 2
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Lập trình Java</a></li>
+                <li class="cha"><a href="#">Thiết kế web</a>
+                    <ul class="con">
+                        <li><a href="#">Tài liệu HTML</a></li>
+                        <li><a href="#">Tài liệu CSS</a></li>
+                        <li><a href="#">Tài liệu Javascript</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Lập trình C#</a></li>
+                <li><a href="#">Lập trình hướng đối tượng</a></li>
+                <li><a href="#">Cơ sở dữ liệu</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="container">
+                <h1>Đếm từng từ trong Câu</h1>
+                <div class="dong">
+                    <p>Nhập một câu:</p>
+                    <div>
+                        <input type="text" placeholder="Nhập một chuỗi" id="inputvl">
+                    </div>
+                </div><br>
+                <div class="dong">
+                    <p>số từ trong câu:</p>
+                    <div>
+                        <input type="number" id="kq" readonly="">
+                    </div>
+                </div>
+                <div class="dong" style="margin-top:10px;" >
+                    <input type="button" style=" cursor:pointer; width:50px;margin: 0px auto; color:black;" value="Đếm" id="btn" onclick="dem()">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        Bản quyền thuộc về test 2
+    </footer>
+    <script>
+        function dem(){
+            const chuoi = document.getElementById("inputvl").value;
+            if(chuoi == ""){
+                alert("bạn chưa nhập dữ liệu");
+            }
+           
+            var a = chuoi.trim().split(" ");
+            var arr = new Array();
+            for(var i = 0 ; i < a.length ; i++) {
+                if(a[i] != ''){
+                    arr.push(a[i]);
+                }
+            }
+            document.getElementById("kq").value = arr.length;
+            console.log(arr);
+        }
+    </script>
+</body>
+</html>

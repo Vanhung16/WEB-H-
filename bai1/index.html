@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bài kiểm tra số 2</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Lập trình Java</a></li>
+                <li class="cha"><a href="#">
+                    <a href="#">Thiết kế web</a>
+                    <ul class="con">
+                        <li><a href="#">Tài liệu HTML</a></li>
+                        <li><a href="#">Tài liệu CSS</a></li>
+                        <li><a href="#">Tài liệu Javascript</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Lập trình C#</a></li>
+                <li><a href="#">Lập trình web</a></li>
+                <li><a href="#">Lập trình hướng đối tượng</a></li>
+                <li><a href="#">Cơ sở dữ liệu</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+           <div class="container">
+            <div class="dong">
+                <div class="text">
+                    Họ và tên
+                </div>
+                <input type="text" name="hoten" placeholder="Họ tên" id="hoten">
+            </div><div class="dong">
+                <div class="text">
+                    địa chỉ
+                </div>
+                <input type="text" name="diachi" placeholder="Địa chỉ" id="diachi">
+            </div>
+            <div class="dong">
+                <div class="text">
+                    Giới tính
+                </div>
+                <form action="">
+                    Nam <input type="radio" name="gender" value="nam">
+                    Nữ <input type="radio" name="gender" value="nữ">
+                    Khác <input type="radio" name="gender" value="khác" checked>
+                </form>
+            </div>
+            <div class="dong">
+                <div class="text">
+                    Sở thích
+                </div>
+                <form action="">
+                    Sữa <input type="checkbox" name="favorite" value="Sữa">
+                    Chè bưởi <input type="checkbox" name="favorite" value="Chè bưởi">
+                    Phở <input type="checkbox" name="favorite" value="Phở" >
+                </form>
+            </div>
+            <div class="dong">
+                <input type="button" class="btn" value="kiểm tra" onclick="kiemtra()" >
+            </div>
+           </div>
+        </div>
+    </section>
+    <footer>
+        bản quyền thuộc về test 2
+    </footer>
+
+    <script>
+        function kiemtra() {
+            var hotennhap = document.getElementById('hoten').value;
+            if(hotennhap == ''){
+                    alert("chưa nhập thông tin");
+                }
+            hotennhap = hotennhap.trim();
+            var arr = hotennhap.split(" ");
+            var linenew = new Array();
+            console.log(arr);
+            if( hotennhap != ''){
+                for(var i = 0 ; i < arr.length ; i++){
+                    if( arr[i] != ""){
+                     var a = arr[i][0].toUpperCase() + arr[i].slice(1);
+                     linenew.push(a);
+                    }
+                }
+            }
+            document.getElementById('hoten').value = linenew.join(' ');
+               
+        }
+
+       
+    </script>
+
+</body>
+</html>

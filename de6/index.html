@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        bài kiểm tra số 2
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Lập trình java</a></li>
+            <li class="cha"><a href="#">Thiết kế web</a>
+                <ul class="con">
+                    <li><a href="#">Tài liệu HTML</a></li>
+                    <li><a href="#">Tài liệu CSS</a></li>
+                    <li><a href="#">Tài liệu Javascript</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Lập trình C#</a></li>
+            <li><a href="#">Lập trình web</a></li>
+            <li><a href="#">Lập trình hướng đối tượng</a></li>
+            <li><a href="#">Cơ sở dữ liệu</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="container">
+            <h1>Tính tổng số chính phương</h1>
+            <div class="dong">
+                <p>số nguyên n:</p>
+                <input type="number" placeholder="Nhập số nguyên n" id="ipvl">
+            </div>
+            <div class="dong">
+                <p>Tổng giá trị các số chính phương:</p>
+                <input type="text" id="kq" readonly="">
+            </div>
+            <div class="dong">
+                <input type="button" value="Tính" id="btn" onclick="tinh()">
+            </div>
+        </div>
+    </section>
+    <footer>
+        Bản quyền thuộc về test 2
+    </footer>
+    <script>
+
+        function checkscp(x){
+            for(var i = 0 ; i <= x ; i++) {
+                if(i*i == x){
+                    return x;
+                }
+            }
+        }
+        function tinh(){
+            var inputvl = document.getElementById("ipvl").value;
+            var tong = 0;
+            if(inputvl == '')
+                alert("bạn chưa nhập dữ liệu");
+            for(var i = 1 ; i <= inputvl ; i++) {
+                if(checkscp(i)){
+                    tong += i;
+                }
+            }
+            document.getElementById("kq").value = tong;
+        }
+    </script>
+</body>
+</html>
