@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header {
+    width: 100%;
+    height: 100px;
+}
+header>img{
+    width: 100%;
+    height:100px;
+
+}
+section{
+    margin-top: 10px;
+    width: 100%;
+    height: 100% -100px;
+    display: flex;
+}
+.nav{
+    width: 300px;
+    height:100%;
+}
+li{
+    list-style-type: none;
+    background-color:#66FFCC;
+    height:50px;
+    width: 300px;
+    
+
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #330066;
+    display: block;
+    line-height:50px;
+    padding: 0px 10px;
+}
+a:hover{
+    background-color: #FFCCCC;
+}
+.cha{
+    position: relative;
+}
+.con{
+    position:absolute;
+    display: none;
+    z-index: 100;
+    top: 0;
+    left: 300px;
+    width: 100%;
+}
+.cha:hover .con{
+    display: block;
+}
+.muc>img{
+    width: 250px;
+    height: 250px;
+    border: 2px solid #ccc;
+
+}
+.muc{
+    width: 250px;
+    text-align: center;
+    margin:0px 10px 10px 10px;
+    color: #CC3366;
+    font-size:16px;
+    
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+    margin-top:10px;
+}
+.buy{
+    width:70px;
+    background-color: violet;
+    height: 30px;
+    line-height:30px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.chitiet{
+    width:90px;
+    background-color: violet;
+    height: 30px;
+    line-height:30px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin: 0px 10px 10px 10px 10px;
+    background-color:#00A69B;
+}
+.thongtin{
+    width:400px;
+    background-color:#FFCCCC
+}
+.muc:hover{
+    background-color:#00A69B;
+    font-size: 18px;
+    transition: ease-in 1s;
+
+}

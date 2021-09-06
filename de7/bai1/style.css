@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100%;
+
+}
+.tren{
+    display: flex;
+    background-color:violet;
+    height:100px;
+}
+.logo{
+    width: 300px;
+    background-color:red;
+}
+.text{
+    width: 100% -300px;
+    margin:0px auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text>h1{
+    color: #0033CC;
+}
+.duoi{
+    display: flex;
+    background-color:#33CCff;
+
+}
+.duoi>ul{
+    display: flex;
+}
+li{
+    list-style-type: none;
+    height: 50px;
+}
+li>a{
+    display: block;
+    line-height:50px;
+    text-decoration: none;
+    color: #fff;
+    width: 200px;
+    text-transform: uppercase;
+
+}
+a:hover{
+    color: yellow;
+}
+input{
+    width:300px;
+    height: 30px;
+    margin:auto 0px;
+}
+.section{
+    display: flex;
+    width: 100%;
+    margin-top:10px;    
+
+}
+nav{
+    width: 20%;
+}
+nav>h1{
+    background-color:#0066FF;
+    color: #fff;
+    width:50px;
+    line-height:50px;
+    width: 100%;
+    text-align: center;
+}
+nav>.menu>ul li{
+    color: #000;
+    background-color: #33ffff;
+    border-bottom: 1px solid #fff;
+    padding-left: 10px;
+    
+}
+nav>.menu>ul li a{
+    text-transform: lowercase;
+}
+.cha{
+    position: relative;
+}
+.con{
+    display: none;
+    position: absolute;
+    top: 0;
+    left:100%;
+}
+.cha:hover .con{
+    display: block;
+}
+
+section{
+    width: 80%;
+    
+}
+.title{
+    width: 300px;
+    height: 50px;
+    background-color: #33ccff;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 50px;
+    padding-left: 10px;
+}
+hr{
+    background-color: #33ccff;
+    border: 3px solid #33ccff;;
+}
+.sp{
+    display:flex;
+    flex-wrap: wrap;
+}
+.muc{
+    width:23%;
+    background-color:#fff;
+    margin:  10px;
+    border: 1px solid #ccc;
+    
+}
+.muc>.img{
+    background-color: #0033CC;
+    width: 90%;
+    height: 100px;
+    margin: 0px auto;
+}
+.muc>.img:hover{
+    width: 100%;
+}
+.muc>.text{
+    color:#000;
+}
+.muc>.text:hover{
+    color: red;
+}

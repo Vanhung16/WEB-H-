@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 300px;
+        }
+        table{
+            width: 80%;
+            margin:0px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="conatiner" style="border:1px solid black; width:50%; margin: 100px auto;">
+        <table>
+            <tr>
+                <td class="text">Nhập chuỗi:</td>
+                <td >
+                    <input type="text" id="ipvl">
+                </td>
+            </tr>
+            <tr>
+                <td class="text">Nhập từ:</td>
+                <td >
+                    <input type="text" id="ipvl2">
+                </td>
+            </tr>
+            <tr>
+                <td class="text">Thông báo</td>
+                <td >
+                    <input type="number" id="kq" readonlt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" onclick="kiemtra()" value="kiểm tra">
+                </td>
+                <td>
+                <input type="button" id="clear"  value="Hủy bỏ">
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var chuoi = document.getElementById("ipvl");
+        var word = document.getElementById("ipvl2");
+        function kiemtra(){
+            var dem = 0;
+            var a = chuoi.value.split('');
+            if(a.length > 225){
+                alert("error");
+
+            }
+            var b = chuoi.value.split(' ');
+            for(var i = 0 ; i < b.length ; i++){
+                if(b[i] == word.value){
+                    dem++;
+                }
+            }
+            document.getElementById("kq").value =dem;
+        }
+        document.getElementById("clear").addEventListener("click",clear);
+        function clear(){
+            chuoi.value = '';
+            word.value = '';
+            document.getElementById("kq").value ="";
+        }
+    </script>
+</body>
+</html>

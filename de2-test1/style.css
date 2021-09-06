@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 100px;
+}
+header>img{
+    width: 100%;
+    height:100%;
+}
+
+nav>ul{
+    display: flex;
+    background-color: #66FFCC;
+    width: 100%;
+}
+li{
+    height: 50px;
+    list-style-type: none;
+
+}
+a{
+    line-height:50px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size:18px;
+    padding: 0px 40px;
+    display:block;
+
+}
+a:hover{
+    color: red;
+    background-color: #FFCCCC;
+}
+.cha{
+    position: relative;
+}
+.con{
+    display: none;
+    position: absolute;
+    top:50px;
+    width: 200%;
+    background-color:#fff;
+}
+.con a{
+    color: blue !important;
+
+}
+.cha:hover .con{
+    display: block;
+}
+section{
+    color: #330066;
+    font-size:16px;
+    display:flex;
+    margin-top: 10px;
+}
+.product{
+    display: flex;
+    width: 60%;
+    margin:0px 20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.sp{
+    width:220px;
+    margin:0px 10px 10px 10px ;
+    text-align:center;
+    font-size:18px;
+    color: #330066;
+    background-color: #66FF66;
+}
+.sp>img:hover{
+    width:220px;
+    transition: ease-in-out 1s;
+}
+.sp>img{
+    width:200px;
+}
+.timkiem{
+    width: 20%;
+    background-color: violet;
+}
+.giohang{
+    width: 20%;
+    background-color:#ccc;
+}
