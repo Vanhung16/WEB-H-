@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td class="title">Nhập chuỗi:</td>
+                <td class="ip">
+                    <input type="text" id="ipvl">
+                </td>
+            </tr>
+            <tr>
+                <td class="title">
+                    Số từ có 4 kí tự
+                </td>
+                <td class="ip">
+                    <input type="number" id="opvl" >
+                </td>
+            </tr>
+            <tr class="btn">
+                <td>
+                    <input type="button" value="Tìm" onclick="find()">
+                </td>
+                <td>
+                    <input type="button" value="Hủy bỏ" id="clear">
+                </td>
+            </tr>
+            <style>
+                .container{
+                    width: 700px;
+                    height: 200px;
+                    margin: auto;
+                    border:1px solid #ccc;
+                }
+                table{
+                    margin: auto;
+                }
+                .title {
+                    text-align: left;
+                }
+                .ip>input{
+                    width:400px;
+                }
+               
+
+            </style>
+            <script>
+                var string = document.getElementById("ipvl");
+                if(string.value.split('') > 255){
+                    alert("bạn nhập quá 255 ksi tự");
+                }
+                function find(){
+                    var dem = 0;
+                    var a = string.value.split(' ');
+                    for(var i = 0; i < a.length; i++){
+                        if(a[i].split('').length == 4){
+                            dem ++;
+                        }
+                    }
+                    document.getElementById("opvl").value = dem;
+                }
+                function clean(){
+                    string.value = '';
+                    document.getElementById("opvl").value ='';
+                }
+                document.getElementById("clear").addEventListener("click",clean);
+            </script>
+        </table>
+    </div>
+</body>
+</html>

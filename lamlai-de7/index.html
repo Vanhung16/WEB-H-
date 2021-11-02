@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <table>
+                <tr>
+                    <td class="text">
+                        Nhập Chuỗi:
+                    </td>
+                    <td class="ipvl">
+                        <input type="text" id="ipVl1">
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="text">
+                        Nhập Từ:
+                    </td>
+                    <td class="ipvl">
+                        <input type="text" id="ipVl2">
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="text">
+                        Thông Báo:
+                    </td>
+                    <td class="ipvl">
+                        <input type="text" id="result">
+                    </td>
+                </tr>
+                <tr >
+                    <td >
+                        <input type="button" value="Kiểm tra" onclick="test()">
+                    </td>
+                    <td>
+                        <input type="button" value="hủy bỏ" id="clear">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <style>
+        .container{
+            width: 700px;
+            margin:auto;
+            border: 1px solid #ccc;
+            box-shadow: #ccc;
+            height:200px;
+        }
+        .text{
+            text-align: left;
+        }
+        .ipvl>input{
+            width:300px;
+        }
+        .content{
+            width:400px;
+            margin:auto;
+            height:100px;
+        }
+    </style>
+    <script>
+        var string = document.getElementById("ipVl1");
+        var word = document.getElementById("ipVl2");
+        function test(){
+            
+            var dem = 0 ;
+            var letter = string.value.split('');
+            if(letter.length > 255){
+                alert('quá 255 kí tự');
+            }
+            var a = string.value.split(' ');
+            for(var i = 0 ; i < a.length ; i++){
+                if(a[i] == word.value){
+                    dem ++;
+                }
+            }
+            document.getElementById("result").value =dem;
+        }
+
+        function clean(){
+            string.value = '';
+            word.value = '';
+            document.getElementById("result").value ='';
+        }
+        document.getElementById("clear").addEventListener("click",clean);
+    </script>
+</body>
+</html>

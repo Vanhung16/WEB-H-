@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td class="title">
+                    Nhập số thứ nhất:
+                </td>
+                <td class="ip">
+                    <input type="text" id="ipvl">
+                </td>
+            </tr>
+            <tr>
+                <td class="title">
+                    Nhập số thứ hai:
+                </td>
+                <td class="ip">
+                    <input type="text" id="ipvl2">
+                </td>
+            </tr>
+            <tr>
+                <td class="title">
+                    BCNN của hai só trên là:
+                </td>
+                <td class="ip">
+                    <input type="text" id="ipvl3">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value ="Tìm" onclick="find()">
+                </td>
+                <td>
+                    <input type="button" value="Hủy bỏ" id="clear">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <style>
+        .container {
+            width: 700px;
+            height:200px;
+            margin: auto;
+        }
+        table{
+            width:500px;
+            height:200px;
+            margin: auto;
+            border: 1px solid #ccc;
+        }
+        .title{
+            text-align: left;
+        }
+        .ip>input{
+            width: 300px;
+        }
+    </style>
+    <script>
+        var a= document.getElementById("ipvl");
+        var b = document.getElementById("ipvl2");
+        function UCLN(a, b){
+            if(b == 0){
+                return a;
+            }
+            return UCLN(b, a%b);
+        }
+        function find(){
+            var kq = UCLN(a.value, b.value);
+            document.getElementById("ipvl3").value = a.value*b.value/kq;
+            
+        }
+        function clean(){
+            a.value = '';
+            b.value='';
+            document.getElementById("ipvl3").value = '';
+        }
+        document.getElementById("clear").addEventListener("click",clean)
+    </script>
+</body>
+</html>

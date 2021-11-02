@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100%;
+
+}
+header>.tren{
+    width: 100%;
+    height: 100px;
+    background-color:violet;
+    display: flex;
+}
+.tren > .logo{
+    width: 300px;
+    height:100px;
+    background-color:aqua;
+}
+.tren>.title{
+    width: 100% - 300px;
+    height: 100px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin:0px auto;
+}
+.tren>.title>h1{
+    color: #0033cc;;
+}
+.duoi{
+    display: flex;
+    background-color:#33ccff;
+    height: 50px;
+    width: 100%;
+
+}
+.duoi>ul{
+    display: flex;
+}
+li{
+    list-style-type: none;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    display: block;
+    padding:0px 20px;
+    line-height:50px;
+    font-weight: bold;
+    color: #fff;
+}
+.duoi> input{
+    width: 300px;
+    height:30px;
+    margin: auto 0px;
+    margin-left: 500px;
+}
+.section{
+    display: flex;
+    margin-top:10px;
+}
+.menu{
+    width:20%;
+}
+.menu>h1{
+    background-color:#0066FF;
+    text-align: center;
+    color: #fff;
+}
+.menu ul{
+    background-color:#33ffff;
+}
+.menu > ul li{
+    border-bottom: 1px solid #fff;
+}
+a:hover{
+    color: yellow;
+}
+section{
+    width:80%;
+    margin-left: 10px;;
+}
+section>.content{
+    background-color:#0033cc;
+    width:300px;
+    height:50px;
+    line-height:50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+.cha{
+    position: relative;
+}
+.submenu{
+    position:absolute;
+    top:0;
+    left:100%;
+    display:none;
+    width:100%;
+}
+.cha:hover .submenu{
+    display: block;
+}
+.sp>.img{
+    width:220px;
+    height: 220px;
+    background-color: blue;
+    margin: 0px auto;
+}
+.sp>.img:hover{
+    width: 250px;
+}
+.sp{
+    width:250px;
+    height:250px;
+    margin: 10px;
+}
+.sp>p{
+    text-align: center;
+    height:50px;
+    line-height:50px;
+}
+.sp>p:hover{
+    color:red;
+}
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+hr{
+    border: 3px solid #0033cc;
+    background-color:#0033cc;
+}

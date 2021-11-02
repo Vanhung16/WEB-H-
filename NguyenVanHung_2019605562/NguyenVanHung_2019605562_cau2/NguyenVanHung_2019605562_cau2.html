@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td class="title">
+                    Họ và tên:
+                </td>
+                <td class="ip">
+                    <input type="text" id="ipvl">
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="title">
+                    Tên
+                </td>
+                <td class="ip">
+                    <input type="text" id="ipvl3">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value ="Hiển thị" onclick="display()">
+                </td>
+                <td>
+                    <input type="button" value="Hủy bỏ" id="clear">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <style>
+        .container {
+            width: 700px;
+            height:200px;
+            margin: auto;
+        }
+        table{
+            width:500px;
+            height:200px;
+            margin: auto;
+            border: 1px solid #ccc;
+        }
+        .title{
+            text-align: left;
+        }
+        .ip>input{
+            width: 300px;
+        }
+    </style>
+    <script>
+        var a= document.getElementById("ipvl");
+      
+       function display(){
+         var x = a.value.trim().split(' ');
+
+         
+     
+           document.getElementById("ipvl3").value = x[x.length - 1];
+
+       }
+       function clean(){
+           a.value = '';
+           document.getElementById("ipvl3").value = '';
+       }
+       document.getElementById("clear").addEventListener("click",clean);
+    </script>
+</body>
+</html>
