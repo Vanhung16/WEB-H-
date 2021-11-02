@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var st = "học Java thật vi diệu ";
+        
+        function check(st){
+            var arr = st.split("");
+            var count1 = 0;
+            var count2 = 0;
+           for(var i = 0 ; i < arr.length ; i++){
+               if(arr[i] == "h"){
+                   count1 ++;
+               }
+               if(arr[i] == "a"){
+                   count2 ++;
+               }
+           }
+           if(count1 == count2){
+               console.log("h xuất hiện "+count1+" lần a xuất hiện "+count2+" lần vậy số lượng bằng nhau");
+           }
+           else {
+                console.log("h xuất hiện "+count1+" lần a xuất hiện "+count2+" lần vậy số lượng không bằng nhau");
+           }
+        }
+
+        check(st);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Phương trình bậc 2: 
+        <span>a</span><span>x<sup>2</sup> + </span> <span>b</span><span>x + </span> <span>c</span> <span> = 0</span>
+        với a= 4; b = 6 ; c = 1
+    </p>
+    <button onclick="myfunction()"> result</button>
+    <p id="PTB2"></p>
+    <script>
+        function myfunction(){
+            const a = 4;
+            const b = 6;
+            const c = 2;
+            var delta = b*b - 4*a*c;
+           
+            if(delta < 0)
+            {
+                document.getElementById("PTB2").innerHTML = "Phương trình vô nghiệm"
+            }else{
+            if(delta == 0){
+                var result = -b/(2*a);
+                document.getElementById("PTB2").innerHTML = "Phương trình có nghiệm kép x1 = x2 = " + result;
+            }
+            else{
+                var result1 = (-b - Math.sqrt(delta)) / (2*a);
+                var result2 = (-b + Math.sqrt(delta)) / (2*a);
+                document.getElementById("PTB2").innerHTML = "Phương trình có 2 nghiệm phân biệt x1 = " + result1 + "; x2 = " + result2;
+            }
+            }
+        }
+    </script>
+</body>
+</html>

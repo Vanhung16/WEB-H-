@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var st1 = "abcde";
+        var st2 = "cdeba";
+
+        function check(st1,st2){
+            var a = st1.split("");
+            var b = st2.split("");
+            if(a.length != b.length){
+                console.log("hai xâu có độ dài xâu không bằng nhau");
+            }
+            else{
+                for(var i = 0 ; i < a.length ; i++){
+                    for(var j = 0 ; j < b.length ; j++){
+                        if(a[i] == b[j]){
+                            console.log("hai xâu đã cho có thể sắp xếp giống nhau");
+                        }
+                    }
+                }
+            }
+        }
+        check(st1,st2);
+    </script>
+</body>
+</html>

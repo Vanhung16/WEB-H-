@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+        var Input= [1,2,3,4,1,2,2,1];
+        function findMostFrequent(arr) {
+            
+            var kq=[0,0,0,0,0,0,0,0,0,0];
+                for(var i=0;i<arr.length;i++)
+                kq[arr[i]]=kq[arr[i]]+1;
+                // console.log(kq);
+                var maxs=0;
+                for(var i=0;i<kq.length;i++)
+                    if(kq[i]!=NaN)
+                    if(maxs<kq[i])
+                    maxs=kq[i];
+                var result=[];
+                for(var i=0;i<kq.length;i++)
+                    if(kq[i]!=NaN)
+                    if(maxs==kq[i])
+                    result.push(i);
+                // console.log(kq);
+                return result;
+        }
+        console.log(findMostFrequent(Input));
+    </script>
+</body>
+</html>

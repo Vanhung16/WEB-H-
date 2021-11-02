@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+   <div id="abc">
+        <span>Enter Your Email Address</span>
+        <input type="text">
+        <button onclick="add()">add more</button>
+   </div>
+    <script>
+        
+        // function add(){
+        //     var html ="";
+        //     html +=  '<span>Enter Your Email Address</span>'
+        //     html += '<input type="text">'
+        //     html += '<button onclick="removed()">addmore</button> <br>'
+        //     document.write( html)
+        // }
+        // function removed(){
+        //     var html ="";
+        //     html +=  '<span>Enter Your Email Address</span>'
+        //     html += '<input type="text">'
+        //     html += '<button onclick="removed()">removed</button> <br>'
+        //     document.write( html)
+        // }
+        function add(){
+            var html ="";
+            html +=  ' <div id="abc"><span>Enter Your Email Address</span><input type="text"><button onclick="elem_removed()">add more</button></div> '
+            document.write(html);
+        }
+        function elem_removed(){
+            var html ="";
+            html +=  ' <div id="abc"><span>Enter Your Email Address</span><input type="text"><button onclick="removed()">removed</button></div> '
+            document.write(html);
+        }
+        function removed(){
+            var elem = document.getElementById("abc");
+            elem.remove();
+        }
+       
+    </script>
+</body>
+</html>

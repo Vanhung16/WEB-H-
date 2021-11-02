@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var st = "I Love You";
+
+        function bai3(st){
+            var arr = st.split("");
+            for(var i = 0 ; i < arr.length ; i++){
+                if(arr[i] == arr[i].toUpperCase()){
+                    arr[i] = arr[i].toLowerCase();
+                }
+                else{
+                    arr[i] = arr[i].toUpperCase();
+                }
+            }
+            return arr.join("");
+        }
+        console.log(bai3(st));
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow:hidden;
+            background-color: blue; 
+        }
+
+        li{
+            float: left;
+            
+        }
+
+        .item1 >a{
+            display: block;
+            color: #fff;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .item1:hover{
+            background-color: red;
+            transition: ease-in 0.6s;
+        }
+
+        .item2{
+            display: none;
+            position: relative;
+        }
+        .item2>a{
+            display: block;
+            color: #fff;
+            padding: 16px;
+            text-decoration: none;
+        }
+        .item2:hover{
+            background-color: red;
+            transition: ease-in 0.6s;
+            
+        }
+        .item1:hover .item2{
+            display:block
+        }
+      
+        .list2{
+            position: absolute;
+            left:8px; 
+        }
+        
+    </style>
+</head>
+<body>
+        <ul class="list1">
+            <li class="item1"><a href="">Chính trị xã hội</a></li>
+            <li class="item1">
+                <a href="">Thế giới</a>
+                <ul class="list2">
+                    <li class="item2"><a href="">Thư viện pháp luật</a></li>
+                    <li class="item2"><a href="">Sống khỏe</a></li>
+                    <li class="item2"><a href="">Pháp luật</a></li>
+                </ul>
+            </li>
+            <li class="item1"><a href="">Nhịp sống trẻ</a></li>
+            <li class="item1"><a href="">Giáo dục</a></li>
+            <li class="item1"><a href="">Kinh tế</a></li>
+        </ul>
+
+</body>
+</html>

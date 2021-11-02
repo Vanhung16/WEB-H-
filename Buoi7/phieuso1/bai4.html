@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <span>Số thứ nhất</span> <input type="number" id="so1"><br><br>
+    <div class="node" style="margin-left:80px">
+    <button class="btn" value="+" onclick="KQ(this.value)">+</button>
+    <button class="btn" value="-" onclick="KQ(this.value)">-</button>
+    <button class="btn" value="*"  onclick="KQ(this.value)">*</button>
+    <button class="btn" value="/" onclick="KQ(this.value)">/</button>
+    <button class="btn" value="**" onclick="KQ(this.value)">^</button>
+    </div><br>
+    <span>Số thứ hai</span> <input type="number" id="so2" style="margin-left:10px"><br><br>
+    <span >Kết quả</span> <input type="number" id="result" style="margin-left: 25px;"><br><br>
+    <script>
+        
+        function KQ(x){
+            var sothunhat = document.getElementById("so1").value;
+            var sothuhai = document.getElementById("so2").value;
+            // var pheptinh = document.getElementsByClassName('btn').value;
+            var kq = sothunhat  x sothuhai;
+            document.getElementById("result").value = kq;
+            console.log(kq);
+        }        
+       
+    </script>
+
+</body>
+</html>

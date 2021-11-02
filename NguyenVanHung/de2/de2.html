@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    header{        
+        width: 100%;
+        height:100px;
+        background-color: violet;
+    }
+   
+    nav>ul {
+        margin-top: 50px;
+        display: flex;
+        background-color: #00A69B ;
+        height: 50px;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    .item1 {
+        list-style-type: none;
+        width: 25%;
+        border-right: 1px solid blue;
+    }
+    nav>ul>li>a{
+        text-decoration: none;
+        color: red;
+        line-height: 50px;
+        display: block;
+    }
+    nav>ul li:hover{
+        background-color: #5F5C5C;
+        transition: ease-in 0.6s;
+    }
+    .list2{
+        position: absolute;
+        background-color: #00A69B;
+        list-style-position: outside;
+    }
+    .item2{
+        position: relative;
+        display: none;
+        width: 250px;
+        list-style-type:circle;
+         z-index: 100;        
+         border-bottom: 1px dotted blue;
+        padding-left:10px ;
+    }
+    .item1:hover .item2{
+        display: block;
+    }
+    
+    .item2>a{
+        text-decoration: none;
+        color: red;
+        line-height: 50px;
+        display: block;
+    }
+    section{
+       display: flex; 
+       color: #004080;
+        flex-wrap: nowrap;        
+    }
+    .coso{
+        width: 20%;
+        height: 500px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .content_coso{
+        display: block;
+    }
+    .content{
+        display: flex;
+        width: 60%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .dong{
+        display: flex;
+        width: 100%;
+        height: 225px;
+       
+    }
+    .anh{
+        width: 250px;
+        height: 200px;
+    }
+    .chu{
+        padding-left: 10px;
+        
+    }
+    footer{
+        text-align: center;
+        color: #004080;
+        background-color: black;
+        height:50px;
+        
+    }
+    footer>p{
+        margin-top:10px;
+    }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav>
+        <ul class="list 1">
+                <li class="item1"><a href="#">Trang chủ</a></li>
+                <li class="item1"><a href="#">Đồ gia dụng</a></li>
+                <li class="item1"><a href="#">Điện lạnh</a>
+                    <ul class="list2">
+                        <li class="item2"><a href="#">Sản phẩm điện lạnh</a></li>
+                        <li class="item2"><a href="#">Tủ lạnh theo hãng</a></li>
+                        <li class="item2"><a href="#">Máy giặt theo hãng</a></li>
+                        <li class="item2"><a href="#">Điều hòa theo hãng</a></li>
+                    </ul>
+                </li>
+                <li class="item1"><a href="#">Đện Tử-Âm thanh</a></li>
+                <li class="item1"><a href="#">Điện thoại</a></li>
+                <li class="item1"><a href="#">Laptop</a></li>
+                <li class="item1"><a href="#">Máy tính-linh kiện</a></li>
+                <li class="item1"><a href="#">Hóa đơn mua hàng</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="coso">
+           <div class="conten_coso">
+            <h2>Siêu thị tại hà nội</h2> <br><br>
+            <ul>
+                <li>Trần anh- cầu giấy</li>
+                <li>Trần anh- cầu giấy</li>
+                <li>Trần anh- cầu giấy</li>
+                <li>Trần anh- cầu giấy</li>
+                <li>Trần anh- cầu giấy</li>
+                <li>Trần anh- cầu giấy</li>
+                <li>Trần anh- cầu giấy</li>
+                <li>Trần anh- cầu giấy</li>
+                <li>Trần anh- cầu giấy</li>
+            </ul>
+           </div>
+        </div>
+        <div class="content">
+            <div class="dong">
+                <img src="25560.jpg" class="anh">
+                <div class="chu">
+                    <h3>đèn sưởi phòng tắm sunhouse SHD3903 </h3><br>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ut ipsam nulla. Asperiores doloremque dolorum quaerat inventore dolores quibusdam odio? Blanditiis sint odit assumenda hic. Sequi nesciunt laboriosam voluptas enim.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto a fugit, rem vitae, temporibus quis officiis delectus placeat labore natus fugiat repellat! Totam laborum fugit eligendi facere sapiente, veniam tempore.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga beatae vel nulla rem! Repellendus perferendis, totam facilis eum est non iure officiis enim deserunt quas voluptates veniam magni sapiente dignissimos!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic iste rem sapiente nostrum facere corrupti. Natus cupiditate a maiores sequi, quas blanditiis inventore consequuntur est, voluptate explicabo vitae, quis eos.
+                       
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="dong">
+                <img src="25560.jpg" alt="" class="anh">
+                <div class="chu">
+                    <h3>Quạt sưởi hồng ngoại dfhjsjk</h3><br>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro explicabo fuga reiciendis, cum nisi molestiae eum voluptates molestias eaque dicta quibusdam ducimus consectetur deserunt doloribus earum rem, aliquam quas sapiente.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit distinctio deserunt rerum sunt temporibus blanditiis, est aut molestias itaque laudantium consequatur quibusdam quasi adipisci doloremque quos? Laboriosam nobis minus incidunt!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae beatae nemo consectetur a! Necessitatibus cum maiores omnis aliquam, ullam quod ipsum nobis debitis sed repellendus in ex ipsa facilis sunt?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas hic modi, maxime dolorum rem quisquam nesciunt voluptatibus fugiat aut, ea ut excepturi illum vero. At porro repellat veniam voluptatibus accusantium!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Bản quyền thuộc về CNTT_HAUI.com</p>
+    </footer>
+</body>
+</html>

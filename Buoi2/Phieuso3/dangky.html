@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <style>
+        th{
+            width: 300px;
+        }
+        body{
+            margin: auto;
+        }
+        button{
+            padding: auto;
+           
+        }
+        button:hover{
+            color: #fff;
+            background-color: darkblue;
+        }
+        table{
+            background-color:  rgb(197, 199, 194);
+            border: 1px solid #000
+            
+        }
+    </style>
+</head>
+<body>
+    <table border="1" width="800px" style="border-collapse:collapse" >
+        <caption><h2>Phiếu đăng kí tham gia chương trình khuyến mãi</h2></caption>
+        <tr>
+            <th>Họ và tên</th>
+            <td><input type="text" value="Nguyễn Ngọc Quỳnh Nga" style="width:450px"></td>
+        </tr>
+        <tr>
+            <th>Địa chỉ</th>
+            <td><input type="text" value="2Bia Hùng Vương, Q10"></td>
+        </tr>
+        <tr>
+            <th>Điện thoại</th>
+            <td><input type="text" value="0909097506"></td>
+        </tr>
+        <tr>
+            <th>Phái</th>
+            <td>
+                <input type="radio" name="gender" value="male" id="nam">
+                <label for="nam">Nam</label>
+                <input type="radio" name ="gender" value="female" id="nu">
+                <label for="nu">Nữ</label>
+            </td>
+        </tr>
+        <tr>
+                <th>Nghề nghiệp</th>
+                <td>
+                    <label for="nghenghiep"></label>
+                    <select name="nghenghiep" id="nghenghiep">
+                        <option value="giáo viên"> giáo viên</option>
+                        <option value="công nhân">công nhân</option>
+                        <option value="sinh viên">sinh viên</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <th >Chọn sản phẩm tham gia</th>
+            <td>
+                <label for="nghenghiep"></label>
+                <select name="nghenghiep" id="nghenghiep" multiple>
+                    <option value="Kem đánh răng"> Kem đánh răng</option>
+                    <option value="Bột giặt">Bột giặt</option>
+                    <option value="Dầu gội đầu">Dầu gội đầu</option>
+                    <option value="Sữa tắm">Sữa tắm</option>
+                </select>
+                <!-- <button >Kem đánh răng</button><br>
+                <button>Bột giặt</button><br>
+                <button>Dầu gội đầu</button><br>
+                <button>Sữa tắm</button> -->
+              
+            </td>
+        </tr>
+        <tr>
+            <th>Số người tham gia</th>
+            <td>
+                <label for="songuoi"></label>
+                <input type="number" name="songuoi" value="250000">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button style="margin:0px 368px">Đồng ý</button>
+            </td>
+        </tr>
+      
+    </table>
+</body>
+</html>
